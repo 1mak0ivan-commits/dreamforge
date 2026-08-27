@@ -1,0 +1,35 @@
+.creation-screen__header {
+  background: rgba(232, 192, 125, 0.06);
+}
+
+.creation-screen__finalize-row {
+  padding: 8px 14px;
+  background: rgba(19, 16, 36, 0.86);
+}
+
+.creation-screen__finalize-btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--gold), #c99a4a);
+  color: #2a1d05;
+  font-weight: 800;
+  font-size: 15px;
+  box-shadow: 0 8px 20px rgba(232, 192, 125, 0.25);
+  transition: transform 0.1s ease, opacity 0.15s ease;
+}
+.creation-screen__finalize-btn:active {
+  transform: scale(0.98);
+}
+.creation-screen__finalize-btn:disabled {
+  opacity: 0.4;
+}
+
+.creation-screen__error {
+  margin: 0 14px 6px;
+  padding: 10px 12px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+}

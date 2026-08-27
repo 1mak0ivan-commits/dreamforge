@@ -1,0 +1,17 @@
+# Секреты
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Node
+node_modules/
+dist/
+
+# Данные и загрузки (у каждого своя копия, не коммитим)
+backend/data.json
+backend/uploads/
+!backend/uploads/.gitkeep

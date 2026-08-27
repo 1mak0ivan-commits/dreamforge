@@ -1,0 +1,31 @@
+.swipe-row {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.swipe-row__action {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 88px;
+  color: #100c22;
+  font-size: 12.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 8px;
+}
+
+.swipe-row__content {
+  position: relative;
+  background: var(--bg);
+  touch-action: pan-y;
+  will-change: transform;
+}
+.swipe-row__content--settling {
+  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.3, 1);
+}

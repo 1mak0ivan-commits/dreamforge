@@ -1,0 +1,34 @@
+.world-create-row {
+  display: flex;
+  gap: 10px;
+  padding: 4px 18px 16px;
+}
+.world-create-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  font-weight: 700;
+  font-size: 13.5px;
+  transition: transform 0.1s ease;
+}
+.world-create-btn:active {
+  transform: scale(0.97);
+}
+.world-create-btn--manual {
+  border: 1.5px dashed var(--border);
+  color: var(--text-secondary);
+}
+.world-create-btn--ai {
+  border: 1.5px dashed rgba(232, 192, 125, 0.4);
+  background: var(--gold-soft);
+  color: var(--gold);
+  animation: ai-btn-glow 3s ease-in-out infinite;
+}
+@keyframes ai-btn-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 192, 125, 0); }
+  50% { box-shadow: 0 0 14px 1px rgba(232, 192, 125, 0.22); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .world-create-btn--ai { animation: none; }
+}

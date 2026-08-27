@@ -1,0 +1,77 @@
+/*
+  Мир — это не персонаж, это атмосфера и масштаб, поэтому карточка другой формы,
+  чем сетка персонажей: полноширинная, "кинематографическая" — широкий, невысокий
+  баннер с названием поверх изображения через градиентную подложку, а не квадратная
+  плитка в общей сетке.
+*/
+
+.world-list-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-card);
+  margin: 0 18px 14px;
+  transition: transform 0.12s ease;
+}
+.world-list-card:active {
+  transform: scale(0.985);
+}
+
+.world-list-card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.4 / 1;
+  background: linear-gradient(160deg, #2a2350, #171331);
+  overflow: hidden;
+}
+.world-list-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.world-list-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  color: var(--gold);
+  opacity: 0.75;
+}
+.world-list-card__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(9, 7, 20, 0.88) 0%, rgba(9, 7, 20, 0.15) 55%, transparent 100%);
+}
+.world-list-card__title-overlay {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 12px;
+}
+.world-list-card__title-overlay span {
+  font-size: 21px;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.world-list-card__body {
+  padding: 12px 16px 14px;
+}
+.world-list-card__desc {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.world-list-card__time {
+  font-size: 11.5px;
+  color: var(--text-tertiary);
+  font-weight: 600;
+}
